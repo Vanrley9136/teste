@@ -113,59 +113,33 @@
         }
 
 
-        /* Garantir que o formulário e os inputs fiquem responsivos */
-        [data-action="login"] section {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        [data-action="login"] section label {
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        [data-action="login"] section input {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        [data-action="login"] section button {
-            width: 100%;
-            padding: 18px;
-            font-size: 16px;
-            background-color: #0a3d62;
-            color: #fff;
+        /* Estilos normais (desktop, tablet) */
+        [data-action="submit"]>section>button {
+            flex: 0 0 auto;
+            background-color: var(--btnBg, #2e466e);
+            border-radius: 4px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            color: var(--fontClrBt, #fff);
+            font-size: 1.2em;
+            padding: 0.6em 2em;
+            text-decoration: none;
+            margin-top: 1em;
+            margin: 1em 0 0 0;
+            /* Ajuste para desktop */
         }
 
-        [data-action="login"] section button:hover {
-            background-color: #08354f;
-        }
-
-        [data-action="login"] section button:active {
-            background-color: #062a3d;
-            transform: scale(0.98);
-        }
-
-        /* Ajustes para mobile */
+        /* Estilos aplicados apenas em dispositivos móveis */
         @media (max-width: 768px) {
-            [data-action="login"] section {
-                padding: 15px;
-            }
-
-            [data-action="login"] section button {
-                width: 100%;
-                padding: 20px;
-                font-size: 18px;
+            [data-action="submit"]>section>button {
+                flex: 0 0 100%;
+                /* Botão ocupa 100% da largura */
+                margin: 1em 0 0 0;
+                /* Centraliza o botão */
+                font-size: 1.1em;
+                /* Ajusta o tamanho da fonte para mobile */
+                padding: 0.8em 1em;
+                /* Aumenta o padding para uma aparência melhor no mobile */
             }
         }
     </style>
